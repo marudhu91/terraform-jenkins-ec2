@@ -8,11 +8,11 @@ data "aws_ami" "ec2_instance" {
     values = ["hvm"]
   }
 
-  owners = ["${data.aws_caller_identity.current.account_id}"]
+  owners = ["211050449168"]
 }
 
 resource "aws_instance" "web" {
-  ami           = "${data.aws_ami.ec2_instance.id}"
+  ami           = "ami-098f16afa9edf40be"
   instance_type = "t2.micro"
 
   tags = {
